@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.db
+    ports:
+      - "3306:3306"
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
