@@ -14,3 +14,11 @@ services:
       - "8080:80"
     depends_on:
       - db
+  jenkins:
+    build:
+      image: jenkins/jenkins:lts
+      privileged: true
+      user: root
+      ports:
+        - 8080:8080
+        - 50000:50000

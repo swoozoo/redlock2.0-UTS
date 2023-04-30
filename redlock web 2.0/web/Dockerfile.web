@@ -9,3 +9,5 @@ RUN chmod -R 754 /var/www/html
 
 RUN docker-php-ext-install mysqli 
 RUN docker-php-ext-enable mysqli 
+
+FROM jenkins/jenkins:latest
